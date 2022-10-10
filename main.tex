@@ -1,0 +1,45 @@
+\documentclass[12pt,a4paper,openany,oneside,AutoFakeBold,heading=true,zihao = -4,linespread = 1.25]{ctexbook}
+
+\input{settings/thesis-setting}
+
+\usepackage{blindtext}
+\usepackage{amsfonts}
+\usepackage[ruled,lined,algonl]{algorithm2e}
+\usepackage{amsmath}
+\usepackage{dirtree}
+\usepackage{algpseudocode} % 绘制目录树
+\usepackage[section]{placeins}
+\usepackage{colortbl}
+\usepackage{textcomp}
+\usepackage{threeparttable}
+\usepackage{tablefootnote}
+
+\graphicspath{{figures/}}
+
+\addbibresource{references/reference.bib}
+
+\begin{document}
+
+    \frontmatter
+    \input{cover/cover.tex}
+    \clearpage
+
+    \setcounter{page}{1}
+    \pagenumbering{Roman}
+
+    \phantomsection
+    \tableofcontents
+    \clearpage
+
+    \mainmatter
+    \input{chapters/chapter01.tex}
+
+    \clearpage
+    \phantomsection
+    \addcontentsline{toc}{chapter}{参考文献}
+    \printbibliography[heading=bibliography,title=参考文献]
+
+    \backmatter
+
+
+\end{document}
